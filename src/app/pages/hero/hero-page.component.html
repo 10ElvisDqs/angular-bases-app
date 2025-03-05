@@ -1,29 +1,34 @@
-<div class="row d-flex justify-content-center ">
-  <div class="col-6 bg-light p-5">
-    <h1>{{ name() }}</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 bg-light p-4 shadow-lg rounded">
+      <h1 class="text-center text-primary">{{ name() }}</h1>
 
-    <dl>
-      <td>Nombre:</td>
-      <dd>{{ name() }}</dd>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td class="fw-bold">Nombre:</td>
+            <td>{{ name() }}</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Edad:</td>
+            <td>{{ age() }}</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Método:</td>
+            <td>{{ heroDescription() }}</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Capitalizado:</td>
+            <td>{{ heroDescription() | uppercase }}</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <td>Edad:</td>
-      <dd>{{ age() }}</dd>
-
-      <td>Método:</td>
-      <dd>{{ heroDescription() }}</dd>
-
-      <td>Capitalizado:</td>
-      <!-- ! Intentar  -->
-      <dd>  {{  heroDescription() | uppercase }} </dd>
-    </dl>
-
-    <button (click)="changeHero()" class="btn btn-primary mx-2">
-      Cambiar nombre
-    </button>
-
-    <button  (click)="changeAge()" class="btn btn-primary">Cambiar edad</button>
-
-    <button (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-3">
+        <button (click)="changeHero()" class="btn btn-outline-primary w-100">Cambiar nombre</button>
+        <button (click)="changeAge()" class="btn btn-outline-secondary w-100">Cambiar edad</button>
+        <button (click)="resetForm()" class="btn btn-outline-danger w-100">Reset</button>
+      </div>
+    </div>
   </div>
-
 </div>

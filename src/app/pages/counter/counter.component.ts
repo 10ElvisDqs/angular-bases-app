@@ -18,7 +18,7 @@ export class CounterComponent {
     this.counter.update(  current => current + value);
   }
 
-  recet():void{
+  reset():void{
     this.counter.set(10);
   }
 }

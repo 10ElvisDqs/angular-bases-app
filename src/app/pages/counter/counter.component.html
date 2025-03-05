@@ -1,15 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4 bg-light p-4 shadow-lg rounded text-center">
+      <h3 class="text-primary fw-bold">Counter App</h3>
+      <h2 class="text-success fw-bold">Counter: {{ counter() }}</h2>
 
-
-<div class="row d-flex justify-content-center ">
-  <div class="col-4 bg-light p-5">
-    <h3>Counter App</h3>
-    <h2>Counter: {{counter()}}</h2>
-    <div class="d-flex justify-content-center">
-      <button type="button" class="btn btn-dark m-1" (click)="this.incrementBy(1)"> + </button>
-      <button type="button" class="btn btn-dark m-1" (click)="this.recet()"> recet </button>
-      <button type="button" class="btn btn-dark m-1" (click)="this.decrementBy(-1)"> - </button>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-3">
+        <button type="button" class="btn btn-outline-primary w-100" (click)="incrementBy(1)">+</button>
+        <button type="button" class="btn btn-outline-danger w-100" (click)="reset()">Reset</button>
+        <button type="button" class="btn btn-outline-primary w-100" (click)="decrementBy(-1)">-</button>
+      </div>
     </div>
-
   </div>
-
 </div>

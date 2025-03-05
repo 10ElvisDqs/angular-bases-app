@@ -1,0 +1,37 @@
+<style>
+  .nav-link.active {
+    color: white !important;
+    background: linear-gradient(45deg, #dc3545, #ff5733); /* Degradado rojo */
+    border-radius: 8px;
+    padding: 8px 15px;
+  }
+
+
+
+
+  .navbar-toggler-icon {
+    filter: invert(1); /* Hace que el ícono de hamburguesa sea blanco */
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" routerLink="/">Angular App Bases</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link text-white"
+           routerLink="/counter"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: true}">
+           Counter
+        </a>
+        <a class="nav-link text-white" [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
+        <a class="nav-link text-white" [routerLink]="['/dragonball']" [routerLinkActive]="'active'">Dragon Ball</a>
+        <a class="nav-link text-white" [routerLink]="['/dragonball-super']" [routerLinkActive]="'active'">Dragon Ball Super</a>
+      </div>
+    </div>
+  </div>
+</nav>
